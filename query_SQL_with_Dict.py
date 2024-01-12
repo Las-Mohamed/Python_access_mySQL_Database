@@ -12,7 +12,7 @@ print('The user ' + conn.user + ' is connected to the '
  
 
 # variables for SQL query
-# Pas besoin de selectionner la database / use = 'USE SockWorld'
+# no need to select database / use = 'USE SockWorld'
 select_all = 'SELECT * FROM Suspects;'
 
 # variable :  select all the lost socks
@@ -39,12 +39,12 @@ my_dict = {
    missing_per_day : "Number of disappearance per day"
 }
 
-# transformation de notre disctionnaire en listes
+# transformation of dictionnary in lists
 list_of_SQL_commands = list(my_dict.keys())
 list_of_description = list(my_dict.values())
 
 
-# Fonction qui va executer les commandes SQL dans notre database
+# Fonction that will execute SQL commands in our database
 def parcours(list):
   
   cursor = conn.cursor()
