@@ -11,7 +11,7 @@ print('The user ' + conn.user + ' is connected to the '
  
 
 # variables for SQL query
-# Pas besoin de selectionner la database / use = 'USE SockWorld'
+# no need to select the database / use = 'USE SockWorld'
 select_all = 'SELECT * FROM Suspects;'
 
 # variable :  select all the lost socks
@@ -26,10 +26,10 @@ lost_colors = 'SELECT color, COUNT(*) FROM Socks WHERE MatchID is NULL GROUP BY 
 # Variable : Liste et trie les suspects en fonction des ordres d'apparition 
 suspect_list = 'SELECT Name, COUNT(SightingDate) AS "Nombre d apparition" FROM SockSightings INNER JOIN Suspects ON SockSightings.SuspectID = Suspects.SuspectID GROUP BY Name ORDER BY "Nombre d apparition" DESC'
 
-# Variable : Nombre de disparition par jour
+# Variable : Number of disapearence per day
 missing_per_day = 'SELECT COUNT(SightingDate) AS "Nombre de disparition", DAYNAME(SightingDate) AS date FROM SockSightings GROUP BY date'
 
-# Liste de toutes les variables
+# List of all the variables
 list = [match_id_null, count_matchID_null, lost_colors, suspect_list, missing_per_day]
 
 # open cursor, define and run query, fetch results
