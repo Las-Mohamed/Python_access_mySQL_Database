@@ -24,7 +24,7 @@ count_matchID_null = 'SELECT COUNT(*) FROM Socks WHERE MatchID is NULL'
 # Variable : Count lost socks by colors 
 lost_colors = 'SELECT color, COUNT(*) FROM Socks WHERE MatchID is NULL GROUP BY color'
 
-# Variable : List and sort suspects based on appearance ordersn 
+# Variable : List and sort suspects based on appearance order
 suspect_list = 'SELECT Name, COUNT(SightingDate) AS "Nombre d apparition" FROM SockSightings INNER JOIN Suspects ON SockSightings.SuspectID = Suspects.SuspectID GROUP BY Name ORDER BY "Nombre d apparition" DESC'
 
 # Variable : Number of disappearance per day
